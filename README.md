@@ -21,7 +21,6 @@ Algumas pré-requisitos:
 - [Spring](https://spring.io/why-spring)     | Framework 
 - [PostgreSQL](https://www.postgresql.org/)  | SGBD
 - [RabbitMQ](https://www.rabbitmq.com/)      | Message broker
-- [JUnit](https://junit.org/junit5/)         | Framework para criação de testes unitários
 - [Docker](https://www.docker.com/)          | Virtualização de ambientes
 
 ## Instalação e execução
