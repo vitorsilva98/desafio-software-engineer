@@ -1,0 +1,28 @@
+WITHDRAWAL SERVICE
+-> Testes unitários
+-> Variáveis de ambiente
+
+PAYMENT SERVICE
+-> Testes unitários
+-> Variáveis de ambiente
+
+NOTIFICATION SERVICE
+-> Testes unitários
+-> Variáveis de ambiente
+
+OPERATIONS SERVICE
+-> Testes unitários
+-> Variáveis de ambiente
+-> Trazer transfêrencias recebidas na timeline
+
+USER SERVICE
+-> Testes unitários
+-> Variáveis de ambiente
+-> CPF/CNPJ validator
+-> Password validator
+-> Add name for user
+
+ACCOUNT SERVICE
+-> Testes unitários
+-> Variáveis de ambiente
+-> Add transaction password for account

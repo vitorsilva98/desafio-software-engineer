@@ -1,0 +1,48 @@
+CADASTRAR USUÁRIO
+-> Não possui document ou email já cadastrado | Cria usuário e conta     | OK
+-> Possui document já cadastrado              | Não cria usuário e conta | OK
+-> Possui email já cadastrado                 | Não cria usuário e conta | OK
+
+REALIZAR LOGIN
+-> Usuário cadastrado     | Realiza login | OK
+-> Usuário não cadastrado | Nega login    | OK
+
+BUSCAR CONTA PELO USUÁRIO LOGADO
+-> Pega a conta exata do usuário logado | OK
+
+BUSCAR TODAS AS CONTAS
+-> Pega todas as contas do banco (paginação) | OK
+
+ATUALIZAR STATUS BLOCKED DA CONTA
+-> BLOCKED = TRUE  | BLOQUEIA CONTA    | OK
+-> BLOCKED = FALSE | DESBLOQUEIA CONTA | OK
+
+BUSCAR HISTÓRICO DE OPERAÇÕES DA CONTA
+-> Pega todas as operações da conta do usuário logado (paginação) | OK
+
+BUSCAR OPERAÇÕES POR ID
+-> OPERAÇÃO EXISTE     | DEVOLVE OPERAÇÃO     | OK
+-> OPERAÇÃO NÃO EXISTE | NÃO DEVOLVE OPERAÇÃO | OK
+
+REALIZAR DEPÓSITO
+-> Conta não bloqueada | Atualiza saldo     | OK
+-> Conta bloqueada     | Não atualiza saldo | OK
+
+REALIZAR TRANSFERÊNCIA
+-> Conta não bloqueada e possui saldo e conta alvo não bloqueada       | Atualiza saldo de ambas     | OK
+-> Conta não bloqueada e não possui saldo e conta alvo não bloqueada   | Não atualiza saldo de ambas | OK
+-> Conta bloqueada                                                     | Não atualiza saldo de ambas | OK
+-> Conta não bloqueada e conta alvo bloqueada                          | Não atualiza saldo de ambas | OK
+-> Conta não bloqueada e conta alvo não bloqueada e conta alvo = conta | Não atualiza saldo de ambas | OK
+
+REALIZAR PAGAMENTO
+-> Conta não bloqueada e possui saldo e pagamento da certo | Atualiza saldo     | OK
+-> Conta não bloqueada e possui saldo e pagamento da erro  | Não atualiza saldo | OK
+-> Conta não bloqueada e não possui saldo                  | Não atualiza saldo | OK
+-> Conta bloqueada                                         | Não atualiza saldo | OK
+
+REALIZAR SAQUE
+-> Conta não bloqueada e possui saldo e saque da certo | Atualiza saldo     | OK
+-> Conta não bloqueada e possui saldo e saque da erro  | Não atualiza saldo | OK
+-> Conta não bloqueada e não possui saldo              | Não atualiza saldo | OK
+-> Conta bloqueada                                     | Não atualiza saldo | OK

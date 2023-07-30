@@ -1,0 +1,46 @@
+WITHDRAWAL SERVICE
+CONSUME -> withdrawals_events.approved
+PRODUCE -> withdrawals_events.result
+
+PAYMENT SERVICE 
+CONSUME -> payments_events.approved
+PRODUCE -> payments_events.result
+
+USER SERVICE
+CONSUME ->
+PRODUCE -> users_events.created
+
+NOTIFICATION SERVICE
+
+CONSUME -> accounts_events.created
+CONSUME -> transference_finished.send-notification
+CONSUME -> deposit_finished.send-notification
+CONSUME -> withdrawal_finished.send-notification
+CONSUME -> payment_finished.send-notification
+PRODUCE ->
+
+OPERATIONS SERVICE
+CONSUME -> transference_finished.update-operation
+CONSUME -> deposit_finished.update-operation
+CONSUME -> withdrawal_finished.update-operation
+CONSUME -> payment_finished.update-operation
+PRODUCE -> operations_events.deposit-requested
+PRODUCE -> operations_events.withdrawal-requested
+PRODUCE -> operations_events.transference-requested
+PRODUCE -> operations_events.payment-requested
+
+ACCOUNT SERVICE
+CONSUME -> operations_events.transference-requested
+CONSUME -> operations_events.withdrawal-requested
+CONSUME -> operations_events.deposit-requested
+CONSUME -> operations_events.payment-requested
+CONSUME -> payments_events.result
+CONSUME -> withdrawals_events.result
+CONSUME -> users_events.created
+PRODUCE -> withdrawal_finished
+PRODUCE -> withdrawals_events.approved
+PRODUCE -> payment_finished
+PRODUCE -> payments_events.approved
+PRODUCE -> transference_finished
+PRODUCE -> deposit_finished
+PRODUCE -> accounts_events.created
